@@ -1,0 +1,34 @@
+{
+  "name": "Wishlist",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "title": "User ID"
+    },
+    "product_id": {
+      "type": "string",
+      "title": "Product ID"
+    },
+    "product_name": {
+      "type": "string",
+      "title": "Product Name"
+    },
+    "product_image": {
+      "type": "string",
+      "title": "Product Image"
+    },
+    "product_price": {
+      "type": "number",
+      "title": "Product Price"
+    },
+    "product_sale_price": {
+      "type": "number",
+      "title": "Product Sale Price"
+    }
+  },
+  "required": [
+    "user_id",
+    "product_id"
+  ]
+}

@@ -1,0 +1,6 @@
+﻿import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+export default function Footer() {
+  return <footer className="store-footer" id="about"><div className="store-container footer-grid"><div><Link to="/" className="store-logo" aria-label="Nebula home"><img src="/images/nebula-logo.webp" alt="Nebula" width="600" height="119" loading="lazy" /></Link><p>A little less ordinary.<br />A little more you.</p></div><div><h3>Make a discovery</h3><Link to="/shop">Shop all finds</Link><Link to="/shop?filter=new">New arrivals</Link><Link to="/#categories">Explore categories</Link></div><div><h3>Your corner</h3><Link to="/account">My account</Link><Link to="/wishlist">Saved favourites</Link><Link to="/track-order">Track an order <ArrowUpRight size={14} /></Link></div><div className="footer-message"><h3>Good things, thoughtfully chosen.</h3><p>Fashion, home, tech and the little details that make your day.</p><Link to="/#collections">Find your edit <ArrowUpRight size={16} /></Link></div></div><div className="store-container footer-bottom"><span>© {new Date().getFullYear()} Nebula</span><span>Secure checkout. Free shipping over ₹999.</span></div></footer>;
+}

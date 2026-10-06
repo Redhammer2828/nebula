@@ -1,0 +1,67 @@
+{
+  "name": "Coupon",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "title": "Coupon Code"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "discount_type": {
+      "type": "string",
+      "enum": [
+        "percentage",
+        "fixed"
+      ],
+      "title": "Discount Type"
+    },
+    "discount_value": {
+      "type": "number",
+      "title": "Discount Value"
+    },
+    "min_order_value": {
+      "type": "number",
+      "title": "Minimum Order Value",
+      "default": 0
+    },
+    "max_discount": {
+      "type": "number",
+      "title": "Maximum Discount"
+    },
+    "expiry_date": {
+      "type": "string",
+      "title": "Expiry Date"
+    },
+    "usage_limit": {
+      "type": "number",
+      "title": "Usage Limit"
+    },
+    "used_count": {
+      "type": "number",
+      "title": "Used Count",
+      "default": 0
+    },
+    "is_first_order": {
+      "type": "boolean",
+      "title": "First Order Only",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "title": "Status",
+      "default": "active"
+    }
+  },
+  "required": [
+    "code",
+    "discount_type",
+    "discount_value"
+  ]
+}

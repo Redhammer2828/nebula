@@ -1,0 +1,42 @@
+{
+  "name": "Collection",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "slug": {
+      "type": "string",
+      "title": "Slug"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "image": {
+      "type": "string",
+      "title": "Image URL"
+    },
+    "product_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Product IDs"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "title": "Status",
+      "default": "active"
+    }
+  },
+  "required": [
+    "name",
+    "slug"
+  ]
+}

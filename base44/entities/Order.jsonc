@@ -1,0 +1,143 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "title": "User ID"
+    },
+    "user_name": {
+      "type": "string",
+      "title": "User Name"
+    },
+    "user_email": {
+      "type": "string",
+      "title": "User Email"
+    },
+    "order_number": {
+      "type": "string",
+      "title": "Order Number"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "size": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "Order Items"
+    },
+    "subtotal": {
+      "type": "number",
+      "title": "Subtotal"
+    },
+    "discount": {
+      "type": "number",
+      "title": "Discount",
+      "default": 0
+    },
+    "shipping": {
+      "type": "number",
+      "title": "Shipping"
+    },
+    "tax": {
+      "type": "number",
+      "title": "Tax"
+    },
+    "total": {
+      "type": "number",
+      "title": "Total"
+    },
+    "coupon_code": {
+      "type": "string",
+      "title": "Coupon Code"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "placed",
+        "confirmed",
+        "packed",
+        "shipped",
+        "out_for_delivery",
+        "delivered",
+        "cancelled",
+        "returned"
+      ],
+      "title": "Order Status",
+      "default": "placed"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid",
+        "failed",
+        "refunded"
+      ],
+      "title": "Payment Status",
+      "default": "pending"
+    },
+    "payment_method": {
+      "type": "string",
+      "title": "Payment Method"
+    },
+    "address": {
+      "type": "object",
+      "title": "Shipping Address",
+      "additionalProperties": true
+    },
+    "tracking_number": {
+      "type": "string",
+      "title": "Tracking Number"
+    },
+    "estimated_delivery": {
+      "type": "string",
+      "title": "Estimated Delivery Date"
+    },
+    "status_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "Status History"
+    }
+  },
+  "required": [
+    "user_id",
+    "order_number",
+    "items",
+    "total",
+    "status",
+    "payment_status"
+  ]
+}
